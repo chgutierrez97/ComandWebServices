@@ -1,0 +1,11 @@
+com\ast\ejecutorws\misc\EscapeQuestionMark.class
+com\ast\ejecutorws\misc\PruebaSSL.class
+com\ast\ejecutorws\misc\InstallCert$SavingTrustManager.class
+com\ast\ejecutorws\cmd\impl\EncryptCommandTest.class
+com\ast\ejecutorws\cmd\impl\SSLSoapCommandTest.class
+com\ast\ejecutorws\EjecutorWSTest.class
+com\ast\ejecutorws\cmd\impl\SoapCommandTest.class
+com\ast\ejecutorws\util\EncryptorTest.class
+com\ast\ejecutorws\args\ArgumentParserTest.class
+com\ast\ejecutorws\cmd\impl\HelpCommandTest.class
+com\ast\ejecutorws\misc\InstallCert.class

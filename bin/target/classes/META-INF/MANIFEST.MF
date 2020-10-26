@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Built-By: Christian Gutierrez
+Class-Path: executorws_lib/args4j-2.33.jar executorws_lib/logback-clas
+ sic-1.2.3.jar executorws_lib/logback-core-1.2.3.jar executorws_lib/sl
+ f4j-api-1.7.25.jar executorws_lib/janino-3.0.6.jar executorws_lib/com
+ mons-compiler-3.0.6.jar executorws_lib/guava-20.0.jar executorws_lib/
+ httpclient-4.5.8.jar executorws_lib/httpcore-4.4.11.jar executorws_li
+ b/commons-logging-1.2.jar executorws_lib/commons-codec-1.11.jar
+Build-Jdk: 1.8.0_151
+Created-By: Maven Integration for Eclipse
+Main-Class: com.ast.ejecutorws.EjecutorWS
+

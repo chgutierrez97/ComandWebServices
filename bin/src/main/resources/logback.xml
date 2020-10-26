@@ -1,0 +1,48 @@
+<configuration>
+
+	<root level="OFF">
+	</root>
+
+	<property file="wsexecutor.conf" />
+
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>log/executor_ws.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>executor_ws.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+			<!-- keep 30 days' worth of history capped at 3GB total size -->
+			<maxHistory>30</maxHistory>
+			<totalSizeCap>3GB</totalSizeCap>
+		</rollingPolicy>
+
+		<encoder>
+			<charset>UTF-8</charset>
+			<pattern>%d{HH:mm:ss} %level %logger[%line]: %msg %n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<if condition='property("dev_mode_on").contains("true")'>
+		<then>
+			<logger name="com.ast.ejecutorws" level="DEBUG">
+				<appender-ref ref="FILE" />
+				<appender-ref ref="STDOUT" />
+			</logger>
+		</then>
+		<else>
+			<logger name="com.ast.ejecutorws" level="INFO">
+				<appender-ref ref="FILE" />
+			</logger>
+		</else>
+	</if>
+
+
+</configuration>
